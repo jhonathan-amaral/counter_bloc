@@ -1,16 +1,19 @@
-# counter_bloc
+## Gerenciamento de Estado em Flutter: BLoC vs. Cubit
+ Projeto: Contador 
 
-A new Flutter project.
+### O que é BLoC?
+O BLoC (Business Logic Component) é um padrão de design que separa a lógica de negócios da interface do usuário em aplicativos Flutter. Ele utiliza eventos e estados para gerenciar a interação do usuário e a lógica de negócios, promovendo boas práticas como a imutabilidade e facilitando a testabilidade do código.
 
-## Getting Started
+### O que é Cubit?
 
-This project is a starting point for a Flutter application.
+O Cubit é uma versão simplificada do BLoC que elimina a necessidade de eventos. Em vez de usar eventos para emitir estados, o Cubit permite que os desenvolvedores chamem métodos diretamente para emitir novos estados, reduzindo a complexidade e a quantidade de código necessário. Ambos, Cubit e BLoC, são interoperáveis, pois o BLoC é uma extensão do Cubit.
 
-A few resources to get you started if this is your first Flutter project:
+### Diferenças entre BLoC e Cubit:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Estrutura: O BLoC é baseado em eventos e requer a definição de classes de eventos, enquanto o Cubit utiliza métodos diretos para emitir estados.
+Complexidade: O Cubit é mais fácil de usar e entender, tornando-o ideal para casos de uso simples, enquanto o BLoC é mais adequado para aplicações que exigem uma lógica de negócios mais complexa.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Implementação:
+
+Para usar o Cubit, você precisa adicionar as dependências bloc e flutter_bloc no arquivo pubspec.yaml. A implementação envolve a criação de uma classe Cubit que gerencia o estado e métodos para alterar esse estado.
+Esses pontos destacam as principais características e diferenças entre BLoC e Cubit, permitindo que os desenvolvedores escolham a abordagem mais adequada para suas necessidades de gerenciamento de estado em Flutter.
